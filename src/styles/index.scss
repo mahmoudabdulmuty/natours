@@ -1,0 +1,15 @@
+@import './globals';
+
+.header {
+	width: 100%;
+	height: 95vh;
+	background: linear-gradient(
+			to right,
+			hsla(111, 55%, 64%, 0.411),
+			hsla(160, 64%, 43%, 0.514)
+		),
+		url('../img/hero.jpg');
+	background-size: cover;
+	background-position: top;
+	clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+}
