@@ -1,6 +1,5 @@
 @import './globals';
 
-// Header
 .header {
 	position: relative;
 	width: 100%;
@@ -14,7 +13,6 @@
 	background-size: cover;
 	background-position: top;
 	clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
-	backface-visibility: hidden;
 }
 
 .header__img-box {
@@ -32,25 +30,29 @@
 	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	text-align: center;
 }
-
+.header__heading {
+	margin-bottom: 6rem;
+}
 .header__heading > * {
 	color: #fff;
 	display: block;
 	text-transform: uppercase;
+	backface-visibility: hidden;
 }
 
 .heading__main {
 	font-weight: 400;
 	font-size: 6rem;
 	letter-spacing: 3.5rem;
-	animation: moveInLeft 1s ease-in;
+	animation: moveInLeft 1s ease-out;
 }
 
 .heading__sub {
 	font-size: 2rem;
 	letter-spacing: 1.8rem;
-	animation: moveInRight 1s ease-in;
+	animation: moveInRight 1s ease-out;
 }
 
 @keyframes moveInLeft {
@@ -78,4 +80,65 @@
 		opacity: 1;
 		transform: translateX(0);
 	}
+}
+
+.btn:link,
+.btn:visited {
+	display: inline-block;
+	text-decoration: none;
+	padding: 1.5rem 4rem;
+	font-size: 1.6rem;
+	border-radius: 100px;
+	text-transform: uppercase;
+	transition: all 0.3s;
+	position: relative;
+}
+.btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px rgba($color: #000, $alpha: 0.2);
+}
+.btn:active {
+	transform: translateY(-1px);
+	box-shadow: 0 5px 10px rgba($color: #000, $alpha: 0.2);
+}
+
+.btn-white {
+	background-color: #fff;
+	color: #777;
+}
+
+.btn::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	border-radius: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: all 0.3s;
+}
+.btn-white::after {
+	background-color: #fff;
+}
+
+.btn:hover::after {
+	transform: scaleX(1.4) scaleY(1.6);
+	opacity: 0;
+}
+
+@keyframes moveFromBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+.btn-animated {
+	animation: moveFromBottom 0.5s ease-in-out 0.5s;
+	animation-fill-mode: backwards;
 }

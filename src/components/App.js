@@ -12,6 +12,9 @@ export default function App() {
 						<span className="heading__main">outdoors</span>
 						<span className="heading__sub">is where life happens</span>
 					</h1>
+					<a href="/" className="btn btn-white btn-animated">
+						discover our tours
+					</a>
 				</div>
 			</header>
 		</>
