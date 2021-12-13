@@ -37,12 +37,12 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-	color: $dark-text;
+	color: $color-grey-dark;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	min-height: 100vh;
 	text-rendering: optimizeSpeed;
-	line-height: 1.5;
+	line-height: 1.7;
 	padding: 3rem;
 }
 

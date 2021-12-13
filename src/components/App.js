@@ -4,8 +4,8 @@ export default function App() {
 	return (
 		<>
 			<header className="header">
-				<div className="header__img-box">
-					<img className="header__img" src={logo} alt="logo" />
+				<div className="header__logo-box">
+					<img className="header__logo" src={logo} alt="logo" />
 				</div>
 				<div className="header__text-box">
 					<h1 className="heading-primary">
